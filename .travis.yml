@@ -8,6 +8,11 @@ matrix:
         - gcc
     - os: linux
       arch: s390x
+      addons:
+        apt:
+          update: true
+          packages:
+          - gcc
       compiler:
         - clang
         - gcc
