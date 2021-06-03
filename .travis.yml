@@ -15,6 +15,7 @@ matrix:
           packages:
           - gcc
           - libncursesw5
+          - libncursesw5-dev
       compiler:
         - clang
         - gcc
