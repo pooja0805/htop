@@ -14,10 +14,10 @@ compiler:
 addons:
   apt:
     update: true
-      packages:
-          - gcc
-          - libncursesw5
-          - libncursesw5-dev
+    packages:
+    - gcc
+    - libncursesw5
+    - libncursesw5-dev
 
 script:
   - ./autogen.sh
