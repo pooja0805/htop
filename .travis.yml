@@ -1,15 +1,15 @@
 language: c
 
+compiler:
+  - clang
+  - gcc
+
 jobs:
   include:
     - os: freebsd
     - os: linux
       arch: s390x
       dist: bionic
-
-compiler:
-  - clang
-  - gcc
 
 addons:
   apt:
