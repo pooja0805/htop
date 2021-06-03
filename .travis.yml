@@ -1,11 +1,12 @@
 language: c
 
+compiler:
+  - clang
+  - gcc
+
 matrix:
   include:
     - os: freebsd
-      compiler:
-        - clang
-        - gcc
     - os: linux
       arch: s390x
       dist: bionic
@@ -16,9 +17,6 @@ matrix:
           - gcc
           - libncursesw5
           - libncursesw5-dev
-      compiler:
-        - clang
-        - gcc
 
 script:
   - ./autogen.sh
