@@ -1,11 +1,16 @@
 language: c
 
-compiler:
-  - clang
-  - gcc
-
-os:
-  - freebsd
+matrix:
+  include:
+    - os: freebsdl
+      compiler:
+        - clang
+        - gcc
+    - os: linux
+      arch: s390x
+      compiler:
+        - clang
+        - gcc
 
 script:
   - ./autogen.sh
