@@ -3,28 +3,18 @@ language: c
 matrix:
   include:
     - os: freebsd
-      compiler: clang
-    - os : freebsd
-      compiler: gcc
     - os: linux
       arch: s390x
       dist: bionic
-      compiler: clang
-      addons:
-        apt:
-          update: true
-          packages:
-          - gcc
-          - libncursesw5
-          - libncursesw5-dev
-    - os: linux
-      arch: s390x
-      dist: bionic
-      compiler: gcc
-      addons:
-        apt:
-          update: true
-          packages:
+
+compiler:
+  - clang
+  - gcc
+
+addons:
+  apt:
+    update: true
+      packages:
           - gcc
           - libncursesw5
           - libncursesw5-dev
