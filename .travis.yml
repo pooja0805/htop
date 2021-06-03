@@ -8,11 +8,13 @@ matrix:
         - gcc
     - os: linux
       arch: s390x
+      dist: bionic
       addons:
         apt:
           update: true
           packages:
           - gcc
+          - libncursesw5
       compiler:
         - clang
         - gcc
