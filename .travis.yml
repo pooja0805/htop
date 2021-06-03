@@ -4,14 +4,14 @@ jobs:
   include:
     - os: freebsd
       compiler:
-      - gcc
-      - clang
+        - gcc
+        - clang
     - os: linux
       arch: s390x
       dist: bionic
       compiler:
-      - gcc
-      - clang
+        - gcc
+        - clang
 
 addons:
   apt:
