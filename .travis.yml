@@ -1,8 +1,8 @@
 language: c
 
-arch: s390x
-
-dist: bionic
+arch: 
+- s390x
+- amd64
 
 compiler:
   - gcc
@@ -12,13 +12,10 @@ os:
 - freebsd
 - linux
 
-addons:
-  apt:
-    update: true
-    packages:
-    - gcc
-    - libncursesw5
-    - libncursesw5-dev
+before_script:
+  if [[ ${TRAVIS_CPU_ARCH} == 's390x' ]]; then
+      sudo apt-get update && sudo apt-get install -y libncursesw5-dev ;
+  fi
 
 script:
   - ./autogen.sh
